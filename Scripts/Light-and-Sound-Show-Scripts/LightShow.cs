@@ -16,20 +16,22 @@ using System.IO;
 using System.Collections.Generic;
 using UnityEngine;
 using Utilities;
+using System;
 
-public class LightShow : MonoBehaviour
+public class LightShow : LightManager
 {
-    [SerializeField]
-    public GameObject pixel1, pixel2, pixel3, pixel4;
-    public List<GameObject> Matrix = new List<GameObject>(); // LED Matrix of pixels
-    private Renderer cubeRenderer;
+    public List<GameObject> Matrix;
+    public Renderer cubeRenderer;
     private Color newCubeColor;
 
-    /*// Constructor
+    [SerializeField]
+    public GameObject pixel1, pixel2, pixel3, pixel4;
+
+    // Constructor
     public LightShow()
 	{
-
-	}*/
+        Matrix = new List<GameObject>(); // LED Matrix of pixels
+    }
 
     void Start()
     {
@@ -38,14 +40,15 @@ public class LightShow : MonoBehaviour
         Matrix.Add(pixel3);
         Matrix.Add(pixel4);
 
+        //LightShow lightShow = new LightShow();
         StartCoroutine(TurnOnTheLights());
-        StartCoroutine(TurnOffTheLights());
+        //StartCoroutine(TurnOffTheLights());
     }
 
     /**
      * Turns On The Lights one by one
      */
-    IEnumerator TurnOnTheLights()
+    public IEnumerator TurnOnTheLights()
     { 
         foreach (GameObject obj in Matrix)
         {
@@ -59,7 +62,7 @@ public class LightShow : MonoBehaviour
      * Turns Off The Lights one by one
      * 
      */
-    IEnumerator TurnOffTheLights()
+    public IEnumerator TurnOffTheLights()
 	{
         yield return new WaitForSeconds(5);
 
@@ -70,7 +73,13 @@ public class LightShow : MonoBehaviour
             cubeRenderer.material.color = new Color(0, 0, 0);
         }
     }
-    void Update()
+
+	public void DisplayMessageDown()
+	{
+		Debug.Log("we down");
+	}
+
+	void Update()
     {
 
     }

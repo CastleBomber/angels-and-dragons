@@ -20,12 +20,8 @@ using Utilities;
 
 public class ShowManager : MonoBehaviour
 {
-	//public GameObject manager;
-	//LightManager m = new LightManager();
-	
-
 	void Start()
 	{
-		//manager.GetComponent<LightShow>.TurnOnTheLights();
+		ShowManager m = new ShowManager();
 	}
 }
