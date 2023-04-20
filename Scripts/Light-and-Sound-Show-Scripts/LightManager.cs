@@ -1,4 +1,3 @@
-
 using System.Collections;
 using System.Numerics;
 using System.IO;
@@ -6,18 +5,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using Utilities;
 
-public class LightManager : MonoBehaviour
+public class LightManager : ShowManager
 {
 	void Start()
 	{
-		LightShow lightShow = new LightShow();
-		//lightShow.TurnOnTheLights();
-		//StartCoroutine(lightShow.TurnOnTheLights());
-		//StartCoroutine(lightShow.TurnOffTheLights());
+		StartCoroutine(goods());
 	}
 
-	void DisplayMessageUp()
+	public IEnumerator goods()
 	{
-		Debug.Log("we up");
+		yield return new WaitForSeconds(1);
+
+		LightShow lightShow = new LightShow();
+		lightShow.TurnOnTheLights();
+
 	}
+
+
+	/*	protected virtual void TurnOnTheLights()
+		{
+
+		}*/
 }

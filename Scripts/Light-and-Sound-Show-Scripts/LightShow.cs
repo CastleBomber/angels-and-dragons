@@ -21,7 +21,7 @@ using System;
 public class LightShow : LightManager
 {
     public List<GameObject> Matrix;
-    public Renderer cubeRenderer;
+    private Renderer cubeRenderer;
     private Color newCubeColor;
 
     [SerializeField]
@@ -31,28 +31,24 @@ public class LightShow : LightManager
     public LightShow()
 	{
         Matrix = new List<GameObject>(); // LED Matrix of pixels
-    }
 
-    void Start()
-    {
         Matrix.Add(pixel1);
         Matrix.Add(pixel2);
         Matrix.Add(pixel3);
         Matrix.Add(pixel4);
 
-        //LightShow lightShow = new LightShow();
-        StartCoroutine(TurnOnTheLights());
-        //StartCoroutine(TurnOffTheLights());
+        //Debug.Log("LightShow() constructed");
     }
 
     /**
      * Turns On The Lights one by one
      */
-    public IEnumerator TurnOnTheLights()
-    { 
+    public void TurnOnTheLights()
+    {
         foreach (GameObject obj in Matrix)
         {
-            yield return new WaitForSeconds(1);
+            Debug.Log("we in -for loop-");
+
             cubeRenderer = obj.GetComponent<Renderer>();
             cubeRenderer.material.color = new Color(255, 0, 0);
         }
