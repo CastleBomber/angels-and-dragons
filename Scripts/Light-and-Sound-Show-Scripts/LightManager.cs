@@ -5,25 +5,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using Utilities;
 
-public class LightManager : ShowManager
+public class LightManager : MonoBehaviour
 {
 	void Start()
 	{
-		StartCoroutine(goods());
+		StartCoroutine(demandLights());
 	}
 
-	public IEnumerator goods()
+	public IEnumerator demandLights()
 	{
 		yield return new WaitForSeconds(1);
 
+		// Create child class
 		LightShow lightShow = new LightShow();
+		
+
+		yield return new WaitForSeconds(1);
+
+		// Call child class function
 		lightShow.TurnOnTheLights();
 
+		yield return new WaitForSeconds(1);
 	}
 
-
-	/*	protected virtual void TurnOnTheLights()
-		{
-
-		}*/
+	public virtual void TurnOnTheLights()
+	{
+	}
 }

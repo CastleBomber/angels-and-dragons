@@ -20,63 +20,46 @@ using System;
 
 public class LightShow : LightManager
 {
-    public List<GameObject> Matrix;
-    private Renderer cubeRenderer;
-    private Color newCubeColor;
-
-    [SerializeField]
-    public GameObject pixel1, pixel2, pixel3, pixel4;
+    protected List<GameObject> Matrix;
+    public GameObject pixel1, pixel2;
 
     // Constructor
     public LightShow()
 	{
         Matrix = new List<GameObject>(); // LED Matrix of pixels
-
-        Matrix.Add(pixel1);
-        Matrix.Add(pixel2);
-        Matrix.Add(pixel3);
-        Matrix.Add(pixel4);
-
-        //Debug.Log("LightShow() constructed");
-    }
+		Matrix.Add(pixel1);
+		Matrix.Add(pixel2);
+	}
 
     /**
      * Turns On The Lights one by one
      */
-    public void TurnOnTheLights()
+    public override void TurnOnTheLights()
     {
-        foreach (GameObject obj in Matrix)
-        {
-            Debug.Log("we in -for loop-");
+        List<MeshRenderer> renderers = new List<MeshRenderer>();
+        MeshRenderer renderer = null;
 
-            cubeRenderer = obj.GetComponent<Renderer>();
-            cubeRenderer.material.color = new Color(255, 0, 0);
-        }
+        foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Pixel"))
+        {
+            renderer = obj.GetComponent<MeshRenderer>();
+            renderer.material.color = new Color(255, 0, 0);
+		}
     }
 
     /**
      * Turns Off The Lights one by one
      * 
      */
-    public IEnumerator TurnOffTheLights()
+/*    public IEnumerator TurnOffTheLights()
 	{
         yield return new WaitForSeconds(5);
 
         foreach (GameObject obj in Matrix)
         {
             yield return new WaitForSeconds(1);
-            cubeRenderer = obj.GetComponent<Renderer>();
+            cubeRenderer = obj.GetComponent<MeshRenderer>();
             cubeRenderer.material.color = new Color(0, 0, 0);
         }
-    }
+    }*/
 
-	public void DisplayMessageDown()
-	{
-		Debug.Log("we down");
-	}
-
-	void Update()
-    {
-
-    }
 }
