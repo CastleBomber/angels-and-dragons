@@ -20,29 +20,32 @@ using System;
 
 public class LightShow : LightManager
 {
-    protected List<GameObject> Matrix;
-    public GameObject pixel1, pixel2;
+    protected List<GameObject> Matrix;  // Built from pixels
+    public GameObject pixel1, pixel2;   // Pixels for matrix
+    protected string pixelStageTag;     // given to each pixel to determine stage
 
-    // Constructor
-    public LightShow()
+	// Constructor
+	public LightShow(string pixelTag)
 	{
         Matrix = new List<GameObject>(); // LED Matrix of pixels
 		Matrix.Add(pixel1);
 		Matrix.Add(pixel2);
+        pixelStageTag = pixelTag;
 	}
 
     /**
      * Turns On The Lights one by one
      */
-    public override void TurnOnTheLights()
+    public override void TurnOnTheLights(Color c)
     {
         List<MeshRenderer> renderers = new List<MeshRenderer>();
         MeshRenderer renderer = null;
 
-        foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Pixel"))
+        foreach (GameObject obj in GameObject.FindGameObjectsWithTag(pixelStageTag))
         {
             renderer = obj.GetComponent<MeshRenderer>();
             renderer.material.color = new Color(255, 0, 0);
+            renderer.material.color = c;
 		}
     }
 

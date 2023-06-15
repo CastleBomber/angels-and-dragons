@@ -7,6 +7,8 @@ using Utilities;
 
 public class LightManager : MonoBehaviour
 {
+	protected List<LightShow> stages; // Stages: Reg, Green Blue
+
 	void Start()
 	{
 		StartCoroutine(demandLights());
@@ -16,19 +18,17 @@ public class LightManager : MonoBehaviour
 	{
 		yield return new WaitForSeconds(1);
 
-		// Create child class
-		LightShow lightShow = new LightShow();
-		
+		LightShow lightShowStageRed = new LightShow("PixelStageRed");
+		LightShow lightShowStageGreen = new LightShow("PixelStageGreen");
+		LightShow lightShowStageBlue = new LightShow("PixelStageBlue");
 
-		yield return new WaitForSeconds(1);
-
-		// Call child class function
-		lightShow.TurnOnTheLights();
-
-		yield return new WaitForSeconds(1);
+		// Displays each stage's lights
+		lightShowStageRed.TurnOnTheLights(Color.red);
+		lightShowStageGreen.TurnOnTheLights(Color.green);
+		lightShowStageBlue.TurnOnTheLights(Color.blue);
 	}
 
-	public virtual void TurnOnTheLights()
+	public virtual void TurnOnTheLights(Color c)
 	{
 	}
 }
