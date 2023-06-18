@@ -22,7 +22,7 @@ public class ShowManager : MonoBehaviour
 {
 	void Start()
 	{
-		//LightManager m = new LightManager();
+		LightManager LManager = new LightManager();
 		//SoundManager s = new SoundManager();
 	}
 }

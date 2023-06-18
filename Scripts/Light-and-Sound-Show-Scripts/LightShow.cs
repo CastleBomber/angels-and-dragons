@@ -18,27 +18,28 @@ using UnityEngine;
 using Utilities;
 using System;
 
-public class LightShow : LightManager
+public class LightShow : MonoBehaviour
 {
-    protected List<GameObject> Matrix;  // Built from pixels
-    public GameObject pixel1, pixel2;   // Pixels for matrix
+    protected List<GameObject> matrix;  // Built from pixels
     protected string pixelStageTag;     // given to each pixel to determine stage
 
 	// Constructor
 	public LightShow(string pixelTag)
 	{
-        Matrix = new List<GameObject>(); // LED Matrix of pixels
-		Matrix.Add(pixel1);
-		Matrix.Add(pixel2);
-        pixelStageTag = pixelTag;
+        matrix = new List<GameObject>(); // LED Matrix of pixels
+        pixelStageTag = pixelTag;        // Identifies proper pixels
+
+        foreach (GameObject obj in GameObject.FindGameObjectsWithTag(pixelStageTag))
+        {
+            matrix.Add(obj);
+        }
 	}
 
     /**
      * Turns On The Lights one by one
      */
-    public override void TurnOnTheLights(Color c)
+    public void TurnOnTheLights(Color c)
     {
-        List<MeshRenderer> renderers = new List<MeshRenderer>();
         MeshRenderer renderer = null;
 
         foreach (GameObject obj in GameObject.FindGameObjectsWithTag(pixelStageTag))
@@ -53,16 +54,15 @@ public class LightShow : LightManager
      * Turns Off The Lights one by one
      * 
      */
-/*    public IEnumerator TurnOffTheLights()
-	{
-        yield return new WaitForSeconds(5);
+    public void TurnOffTheLights()
+    {
+        MeshRenderer renderer = null;
 
-        foreach (GameObject obj in Matrix)
+        foreach (GameObject obj in matrix)
         {
-            yield return new WaitForSeconds(1);
-            cubeRenderer = obj.GetComponent<MeshRenderer>();
-            cubeRenderer.material.color = new Color(0, 0, 0);
+			renderer = obj.GetComponent<MeshRenderer>();
+			renderer.material.color = new Color(0, 0, 0);
         }
-    }*/
+    }
 
 }
