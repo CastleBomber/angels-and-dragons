@@ -30,23 +30,6 @@ public class SoundShow : MonoBehaviour
     {
 	}
 
-	public void Awake()
-	{
-		/*foreach (Sound sound in sounds)
-		{
-			// Creating AudioSources for each sound
-			sound.source = gameObject.AddComponent<AudioSource>();
-
-			// Set properties
-			sound.source.clip = sound.clip;
-			sound.source.volume = sound.volume;
-			sound.source.pitch = sound.pitch;
-			sound.source.loop = sound.loop;
-		}*/
-
-		
-	}
-
 	public void Start()
 	{
 		StartCoroutine(PlayAll());
@@ -69,28 +52,5 @@ public class SoundShow : MonoBehaviour
 
 			yield return new WaitForSeconds(_clip.length);
 		}
-	}
-
-	public void TurnOnTheSound(string name)
-	{    
-		try
-		{
-			//Sound s = Array.Find(sounds, sound => sound.name == name);
-			//s.source.Play();
-
-			//Sound s = GameObject.Find(name);
-
-			AudioSource AS = GameObject.FindGameObjectWithTag("SoundShow").GetComponent<AudioSource>();
-			AS.Play();
-
-		} catch
-		{
-			Debug.Log("Yo");
-			Debug.Log("Sound " + name + " not found!");
-		} 
-    }
-
-	public void TurnOffTheSound()
-	{
 	}
 }

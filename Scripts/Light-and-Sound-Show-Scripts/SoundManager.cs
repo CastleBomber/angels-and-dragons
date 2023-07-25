@@ -20,13 +20,6 @@ public class SoundManager : MonoBehaviour
 	{
 		StartCoroutine(initializeStages());
 	}
-
-	void Start()
-	{
-		StartCoroutine(stageSoundsTurnOn());
-
-		SoundShow[] stagesFromGetComponents = GetComponents<SoundShow>();
-	}
 	
 	public IEnumerator initializeStages()
 	{
@@ -36,11 +29,4 @@ public class SoundManager : MonoBehaviour
 
 		stages.Add(soundShowStageRed); // Note: try new method
  	}
-
-	public IEnumerator stageSoundsTurnOn()
-	{
-		yield return new WaitForSeconds(1);
-
-		//stages[0].TurnOnTheSound("Death-Note");
-	}
 }
