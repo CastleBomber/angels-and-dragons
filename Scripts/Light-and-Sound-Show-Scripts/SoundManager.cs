@@ -7,33 +7,40 @@ using UnityEngine.Audio;
 using Utilities;
 using System;
 
-public class SoundManager : ShowManager
+public class SoundManager : MonoBehaviour
 {
-	//public List<SoundShow> soundShows;
+	protected List<SoundShow> stages;
 
-/*	void Awake()
+	public SoundManager()
 	{
-		foreach(SoundShow s in soundShows)
-		{
-			s.GetComponent<AudioSource>().loop = false;
-			s.source = gameObject.AddComponent<AudioSource>();
-
-			s.source.clip = s.clip;
-			s.source.volume = s.volume;
-			s.source.pitch = s.pitch;
-		}
+		stages = new List<SoundShow>();
 	}
 
-	public void Play(string name)
+	void Awake()
 	{
-		SoundShow s = Array.Find(soundShows, soundShow => soundShow.name == name);
-		s.source.Play();
-	}*/
+		StartCoroutine(initializeStages());
+	}
 
-	void DisplayMessageUp()
+	void Start()
 	{
-		Debug.Log("we up");
+		StartCoroutine(stageSoundsTurnOn());
 
-		//FindObjectOfType<SoundManager>().Play("PlayerDeath");
+		SoundShow[] stagesFromGetComponents = GetComponents<SoundShow>();
+	}
+	
+	public IEnumerator initializeStages()
+	{
+		yield return new WaitForSeconds(0);
+
+		SoundShow soundShowStageRed = new SoundShow();
+
+		stages.Add(soundShowStageRed); // Note: try new method
+ 	}
+
+	public IEnumerator stageSoundsTurnOn()
+	{
+		yield return new WaitForSeconds(1);
+
+		//stages[0].TurnOnTheSound("Death-Note");
 	}
 }

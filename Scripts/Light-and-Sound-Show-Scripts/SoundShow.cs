@@ -19,62 +19,78 @@ using UnityEngine.Audio;
 using Utilities;
 using System;
 
-[System.Serializable]
-public class SoundShow : SoundManager
+public class SoundShow : MonoBehaviour
 {
-    public string name;
-    public AudioClip clip;
-
-	[Range(0f, 1f)]
-    public float volume;
-
-	[Range (.1f, 3f)]
-    public float pitch;
-
-    public List<GameObject> speakers;
-
-    [SerializeField]
-    public GameObject speaker; 
-
-    [HideInInspector]
-    public AudioSource source;
+	public Sound[] sounds;
+	public AudioClip clipPublic;
+	public AudioClip[] audioClips;
 
     // Constructor
     public SoundShow()
     {
-        speakers = new List<GameObject>();
+	}
+
+	public void Awake()
+	{
+		/*foreach (Sound sound in sounds)
+		{
+			// Creating AudioSources for each sound
+			sound.source = gameObject.AddComponent<AudioSource>();
+
+			// Set properties
+			sound.source.clip = sound.clip;
+			sound.source.volume = sound.volume;
+			sound.source.pitch = sound.pitch;
+			sound.source.loop = sound.loop;
+		}*/
+
+		
+	}
+
+	public void Start()
+	{
+		StartCoroutine(PlayAll());
+	}
+
+	public IEnumerator PlayAll()
+	{
+		yield return new WaitForSeconds(0);
+
+		foreach (AudioClip _clip in audioClips)
+		{
+
+			Sound sound = new Sound();
+			sound.source = gameObject.AddComponent<AudioSource>();
+			sound.source.clip = _clip;
+			sound.source.volume = 1;
+			sound.source.pitch = 1;
+
+			sound.source.Play();
+
+			yield return new WaitForSeconds(_clip.length);
+		}
+	}
+
+	public void TurnOnTheSound(string name)
+	{    
+		try
+		{
+			//Sound s = Array.Find(sounds, sound => sound.name == name);
+			//s.source.Play();
+
+			//Sound s = GameObject.Find(name);
+
+			AudioSource AS = GameObject.FindGameObjectWithTag("SoundShow").GetComponent<AudioSource>();
+			AS.Play();
+
+		} catch
+		{
+			Debug.Log("Yo");
+			Debug.Log("Sound " + name + " not found!");
+		} 
     }
 
-    void Start()
-    {
-        SoundShow s = new SoundShow();
-        StartCoroutine(TurnOnTheSound());
-    }
-
-    /**
-     * Turns On The Lights one by one
-     */
-    public IEnumerator TurnOnTheSound()
-    {
-        yield return new WaitForSeconds(1);
-    }
-
-    /**
-     * Turns Off The Sound
-     * 
-     */
-    public IEnumerator TurnOffTheSound()
-    {
-        yield return new WaitForSeconds(1);
-    }
-
-    public void DisplayMessageDown()
-    {
-        Debug.Log("we down");
-    }
-
-    void Update()
-    {
-
-    }
+	public void TurnOffTheSound()
+	{
+	}
 }

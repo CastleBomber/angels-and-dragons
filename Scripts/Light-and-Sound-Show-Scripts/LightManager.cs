@@ -11,17 +11,17 @@ public class LightManager : MonoBehaviour
 
 	public LightManager()
 	{
-		stages = new List<LightShow>(); // Stages: Reg, Green Blue
+		stages = new List<LightShow>(); // Stages: StageRed, StageGreen, StageBlue
 	}
 
 	void Start()
 	{
-		StartCoroutine(createStages());
-		StartCoroutine(stageLightsTurnedOn());
-		StartCoroutine(stageLightsTurnedOff());
+		StartCoroutine(initializeStages());
+		StartCoroutine(stageLightsTurnOn());
+		//StartCoroutine(stageLightsTurnOff());
 	}
 
-	public IEnumerator createStages()
+	public IEnumerator initializeStages()
 	{
 		yield return new WaitForSeconds(0);
 
@@ -34,22 +34,23 @@ public class LightManager : MonoBehaviour
 		stages.Add(lightShowStageBlue);
 	}
 
-	public IEnumerator stageLightsTurnedOn()
+	// Displays each stage's lights
+	public IEnumerator stageLightsTurnOn()
 	{
 		yield return new WaitForSeconds(1);
 
-		// Displays each stage's lights
-		stages[0].TurnOnTheLights(Color.red); 
-		stages[1].TurnOnTheLights(Color.green);
-		stages[2].TurnOnTheLights(Color.blue);
+		stages[0].turnOnTheLights(Color.red); 
+		stages[1].turnOnTheLights(Color.green);
+		stages[2].turnOnTheLights(Color.blue);
 	}
 
-	public IEnumerator stageLightsTurnedOff()
+	// Turns off each stage's lights
+	public IEnumerator stageLightsTurnOff()
 	{
 		// Turns off the stage lights
 		yield return new WaitForSeconds(3);
-		stages[0].TurnOffTheLights();
-		stages[1].TurnOffTheLights();
-		stages[2].TurnOffTheLights();
+		stages[0].turnOffTheLights();
+		stages[1].turnOffTheLights();
+		stages[2].turnOffTheLights();
 	}
 }

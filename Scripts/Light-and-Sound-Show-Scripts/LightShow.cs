@@ -17,11 +17,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using Utilities;
 using System;
+using UnityEngine.Video;
 
 public class LightShow : MonoBehaviour
 {
     protected List<GameObject> matrix;  // Built from pixels
     protected string pixelStageTag;     // given to each pixel to determine stage
+    public VideoClip vc;
 
 	// Constructor
 	public LightShow(string pixelTag)
@@ -38,7 +40,7 @@ public class LightShow : MonoBehaviour
     /**
      * Turns On The Lights one by one
      */
-    public void TurnOnTheLights(Color c)
+    public void turnOnTheLights(Color c)
     {
         MeshRenderer renderer = null;
 
@@ -54,7 +56,7 @@ public class LightShow : MonoBehaviour
      * Turns Off The Lights one by one
      * 
      */
-    public void TurnOffTheLights()
+    public void turnOffTheLights()
     {
         MeshRenderer renderer = null;
 
