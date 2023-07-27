@@ -22,9 +22,11 @@
 
 ## About The Project
 
-Angels-and-Dragons
+Angels and Dragons
 
-Continuation of Heaven's Gate capstone project.
+For fun project attempting to create a virtual reality music festival with angels and dragons as the dominating theme.
+
+The project aims to be a free experience, open to all.
 
 <p align="right"></p>
 
@@ -37,6 +39,8 @@ C#
 <!-- UML -->
 
 ## UML Diagram of Light and Sound Shows
+
+Displaying an example of playing both visuals and sound in Unity with C#.
 
 <img width="441" alt="UML-LS-v1" src="https://github.com/CastleBomber/angels-and-dragons/assets/23395196/dd43b31d-0125-4e21-8243-ef8deab93874">
 
