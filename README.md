@@ -2,21 +2,16 @@
 
 <a name="readme-top"></a>
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
   </a>
 
-  <h3 align="center">CSS-Grid</h3>
+  <h3 align="center">Angels and Dragons</h3>
 
   <p align="center">
-    Frontend design
+    Virtual Reality Music Experience
     <br />
     <br />
     <br />
@@ -27,40 +22,25 @@
 
 ## About The Project
 
-Angels-and-Dragons
-
-Continuation of Heaven's Gate capstone project.
+Welcome to my Unity VR project - a whimsical virtual reality music festival centered around angels and dragons. This project's goal is to create a free and inclusive experience, inviting everyone to immerse themselves in this magical world.
 
 <p align="right"></p>
 
 ### Built With
 
-C#
+Unity and C#
 
 <p align="right"></p>
 
-<!-- GETTING STARTED -->
+<!-- UML -->
 
-## Getting Started
+## UML Diagram of Light and Sound Shows
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Displaying an example of playing both visuals and sound in Unity with C#.
 
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+<img width="441" alt="UML-LS-v1" src="https://github.com/CastleBomber/angels-and-dragons/assets/23395196/dd43b31d-0125-4e21-8243-ef8deab93874">
 
 <p align="right"></p>
-
-<!-- ACKNOWLEDGMENTS -->
-
-## Acknowledgments
-
-Thanks to Traversy Media
-
-- [CSS Grid Crash Course](https://www.youtube.com/watch?v=0xMQfnTU6oo&ab_channel=TraversyMedia)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
