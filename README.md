@@ -22,9 +22,7 @@
 
 ## About The Project
 
-For fun project attempting to create a virtual reality music festival with angels and dragons as the dominating theme.
-
-The project aims to be a free experience, open to all.
+Welcome to my Unity VR project - a whimsical virtual reality music festival centered around angels and dragons. This project's goal is to create a free and inclusive experience, inviting everyone to immerse themselves in this magical world.
 
 <p align="right"></p>
 
