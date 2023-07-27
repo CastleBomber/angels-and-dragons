@@ -11,7 +11,7 @@
   <h3 align="center">Angels and Dragons</h3>
 
   <p align="center">
-    Virtual Reality Experience
+    Virtual Reality Music Experience
     <br />
     <br />
     <br />
