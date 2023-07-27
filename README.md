@@ -22,8 +22,6 @@
 
 ## About The Project
 
-Angels and Dragons
-
 For fun project attempting to create a virtual reality music festival with angels and dragons as the dominating theme.
 
 The project aims to be a free experience, open to all.
