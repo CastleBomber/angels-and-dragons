@@ -30,7 +30,7 @@ The project aims to be a free experience, open to all.
 
 ### Built With
 
-C#
+Unity and C#
 
 <p align="right"></p>
 
