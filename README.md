@@ -1,5 +1,3 @@
-<img width="441" alt="UML-LS-v1" src="https://github.com/CastleBomber/angels-and-dragons/assets/23395196/dd43b31d-0125-4e21-8243-ef8deab93874">
-
 <!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 
 <a name="readme-top"></a>
@@ -15,10 +13,10 @@
   <a href="https://github.com/othneildrew/Best-README-Template">
   </a>
 
-  <h3 align="center">CSS-Grid</h3>
+  <h3 align="center">Angels and Dragons</h3>
 
   <p align="center">
-    Frontend design
+    Virtual Reality Experience
     <br />
     <br />
     <br />
@@ -41,28 +39,13 @@ C#
 
 <p align="right"></p>
 
-<!-- GETTING STARTED -->
+<!-- UML -->
 
-## Getting Started
+## UML Diagram of Light and Sound Shows
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+<img width="441" alt="UML-LS-v1" src="https://github.com/CastleBomber/angels-and-dragons/assets/23395196/dd43b31d-0125-4e21-8243-ef8deab93874">
 
 <p align="right"></p>
-
-<!-- ACKNOWLEDGMENTS -->
-
-## Acknowledgments
-
-Thanks to Traversy Media
-
-- [CSS Grid Crash Course](https://www.youtube.com/watch?v=0xMQfnTU6oo&ab_channel=TraversyMedia)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
