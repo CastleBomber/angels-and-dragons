@@ -1,3 +1,5 @@
+<img width="441" alt="UML-LS-v1" src="https://github.com/CastleBomber/angels-and-dragons/assets/23395196/dd43b31d-0125-4e21-8243-ef8deab93874">
+
 <!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 
 <a name="readme-top"></a>
