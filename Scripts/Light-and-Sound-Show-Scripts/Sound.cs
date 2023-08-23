@@ -12,6 +12,4 @@ public class Sound : MonoBehaviour{
 	private float volume;
 	[Range(.1f, 3f)]
 	private float pitch;
-
-	public bool loop;
 }

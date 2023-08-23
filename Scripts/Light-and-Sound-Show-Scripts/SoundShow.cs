@@ -21,11 +21,8 @@ using System;
 
 public class SoundShow : MonoBehaviour
 {
-	public Sound[] sounds;
-	public AudioClip clipPublic;
 	public AudioClip[] audioClips;
 
-    // Constructor
     public SoundShow()
     {
 	}
@@ -39,15 +36,17 @@ public class SoundShow : MonoBehaviour
 	{
 		yield return new WaitForSeconds(0);
 
+		// For each clip, create a Sound obj and attach AudioSource and assign properties
 		foreach (AudioClip _clip in audioClips)
 		{
-
 			Sound sound = new Sound();
 			sound.source = gameObject.AddComponent<AudioSource>();
 			sound.source.clip = _clip;
 			sound.source.volume = 1;
 			sound.source.pitch = 1;
 
+
+			// Play the all of the Audio clips
 			sound.source.Play();
 
 			yield return new WaitForSeconds(_clip.length);

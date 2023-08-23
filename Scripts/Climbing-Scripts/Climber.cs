@@ -4,25 +4,31 @@ using UnityEngine;
 using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit;
 
+/**
+ * VR Player Rig has Climber Script
+ * 
+ * Left/ Right hand have XR Controller Script that references 
+ * Controller Node: L/R Hand
+ * Select Usage: Grip
+ * 
+ */
 public class Climber : MonoBehaviour
 {
     private CharacterController character;
     public static XRController climbingHand;
     private ContinuousMovement continuousMovement;
 
-    // Start is called before the first frame update
     void Start()
     {
         character = GetComponent<CharacterController>();
         continuousMovement = GetComponent<ContinuousMovement>();
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
 		if (climbingHand)
 		{
-            continuousMovement.enabled = false;
+            continuousMovement.enabled = false;  // !!!!!!!!!!
             Climb();
         }
 		else

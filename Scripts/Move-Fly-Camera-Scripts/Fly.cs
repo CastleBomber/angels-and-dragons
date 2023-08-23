@@ -1,10 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class Fly : MonoBehaviour
+public class Fly : XRBaseInteractable
 {
 	private XRRig rig;
 	private CharacterController character;
@@ -15,25 +16,12 @@ public class Fly : MonoBehaviour
 	public InputHelpers.Button flyDownButtonLeft;
 	public InputHelpers.Button flyDownButtonRight;
 	public float flyingSpeed;
-	public float activationThreshold;
+	public float activationThreshold; 
 
-	// called before the first frame update
 	void Start()
 	{
 		character = GetComponent<CharacterController>();
 		rig = GetComponent<XRRig>();
-	}
-
-	// called once per frame
-	void Update()
-	{
-		/*InputDevice deviceLeft = InputDevices.GetDeviceAtXRNode(inputSourceLeft);
-		deviceLeft.TryGetFeatureValue(CommonUsages.trigger, out triggerValueLeft);
-
-		InputDevice deviceRight = InputDevices.GetDeviceAtXRNode(inputSourceRight);
-		deviceRight.TryGetFeatureValue(CommonUsages.trigger, out triggerValueRight);*/
-
-
 	}
 
 	private void FixedUpdate()
@@ -41,14 +29,19 @@ public class Fly : MonoBehaviour
 		buttonFlightListener();
 	}
 
+	// Fly up or down when triggers or grips jointly pressed
 	void buttonFlightListener()
 	{
-		if (CheckIfActivated(leftController, flyUpButtonLeft) && CheckIfActivated(rightController, flyUpButtonRight))
+		// Fly up
+		if (CheckIfActivated(leftController, flyUpButtonLeft) 
+			&& CheckIfActivated(rightController, flyUpButtonRight))
 		{
 			character.Move(Vector3.up);
 		}
 
-		if (CheckIfActivated(leftController, flyDownButtonLeft) && CheckIfActivated(leftController, flyDownButtonRight))
+		// Fly down
+		if (CheckIfActivated(leftController, flyDownButtonLeft) 
+			&& CheckIfActivated(rightController, flyDownButtonRight))
 		{
 			character.Move(Vector3.down);
 		}
