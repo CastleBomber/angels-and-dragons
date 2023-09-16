@@ -5,16 +5,19 @@ using UnityEngine;
 using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit;
 
+/**
+ * VR Flying Script
+ * 
+ * Left/ Right hand have XR Controller Script that references 
+ * Controller Node: L/R Hand
+ * Activate Usage: Trigger
+ */
 public class Fly : XRBaseInteractable
 {
 	private XRRig rig;
 	private CharacterController character;
 	public XRController leftController;
 	public XRController rightController;
-	public InputHelpers.Button flyUpButtonLeft;
-	public InputHelpers.Button flyUpButtonRight;
-	public InputHelpers.Button flyDownButtonLeft;
-	public InputHelpers.Button flyDownButtonRight;
 	public float flyingSpeed;
 	public float activationThreshold; 
 
@@ -29,27 +32,63 @@ public class Fly : XRBaseInteractable
 		buttonFlightListener();
 	}
 
-	// Fly up or down when triggers or grips jointly pressed
+	/**
+	 * Fly up when triggers jointly pressed
+	 * Fly down when grips jointly pressed
+	 */
 	void buttonFlightListener()
 	{
 		// Fly up
-		if (CheckIfActivated(leftController, flyUpButtonLeft) 
-			&& CheckIfActivated(rightController, flyUpButtonRight))
+		if (CheckTriggers())
 		{
 			character.Move(Vector3.up);
 		}
 
 		// Fly down
-		if (CheckIfActivated(leftController, flyDownButtonLeft) 
-			&& CheckIfActivated(rightController, flyDownButtonRight))
+		if (CheckGrips())
 		{
 			character.Move(Vector3.down);
 		}
 	}
 
-	public bool CheckIfActivated(XRController controller, InputHelpers.Button button)
+	/**
+	 * Checks that both triggers of controllers are pressed
+	 * If true, player flys down
+	 */
+	public bool CheckTriggers()
 	{
-		InputHelpers.IsPressed(controller.inputDevice, button, out bool isActivated, activationThreshold);
-		return isActivated;
+		InputDevices.GetDeviceAtXRNode(leftController.controllerNode).
+			TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out bool triggerLeft);
+
+		InputDevices.GetDeviceAtXRNode(rightController.controllerNode).
+			TryGetFeatureValue(UnityEngine.XR.CommonUsages.triggerButton, out bool triggerRight);
+
+
+		if (triggerLeft && triggerRight)
+		{
+			return true;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Checks that both grips of controllers are pressed
+	 * If true, player flys down
+	 */
+	public bool CheckGrips()
+	{
+		InputDevices.GetDeviceAtXRNode(leftController.controllerNode).
+			TryGetFeatureValue(UnityEngine.XR.CommonUsages.gripButton, out bool gripLeft);
+
+		InputDevices.GetDeviceAtXRNode(rightController.controllerNode).
+			TryGetFeatureValue(UnityEngine.XR.CommonUsages.gripButton, out bool gripRight);
+
+		if (gripLeft && gripRight)
+		{
+			return true;
+		}
+
+		return false;
 	}
 }

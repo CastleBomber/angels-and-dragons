@@ -28,7 +28,7 @@ public class Climber : MonoBehaviour
     {
 		if (climbingHand)
 		{
-            continuousMovement.enabled = false;  // !!!!!!!!!!
+            continuousMovement.enabled = false;
             Climb();
         }
 		else
@@ -37,8 +37,12 @@ public class Climber : MonoBehaviour
         }
     }
 
-    // Climbing Computations
-    void Climb()
+	/**
+	 * Climbing Computations
+	 * A velocity is produced from the climbingHand
+	 * The -velocity indicates a upward movement as the hand goes down
+	 */
+	void Climb()
 	{
         InputDevices.GetDeviceAtXRNode(climbingHand.controllerNode).
             TryGetFeatureValue(CommonUsages.deviceVelocity, out Vector3 velocity);

@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
+/**
+ * Attached to the individual knobs on the climbing wall
+ * Supports climbing feature
+ */
 public class ClimbInteractable : XRBaseInteractable
 {
 	protected override void OnSelectEntered(XRBaseInteractor interactor)
