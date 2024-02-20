@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
 
+/**
+ * Hand movement animation script from Valem's Original VR Series
+ * May be XR-Controller Device Based
+ * Will be creating a new similar script: AnimateHandOnInput
+ */
 public class HandPresence : MonoBehaviour
 {
 	public bool showController = false;

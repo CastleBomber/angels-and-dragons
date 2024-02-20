@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
+// XR Controller(Controller-based) OLD
 public class LocomotionController : MonoBehaviour
 {
     public XRController leftTeleportRay;
