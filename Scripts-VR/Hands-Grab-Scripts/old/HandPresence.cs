@@ -7,6 +7,7 @@ using UnityEngine.XR;
  * Hand movement animation script from Valem's Original VR Series
  * May be XR-Controller Device Based
  * Will be creating a new similar script: AnimateHandOnInput
+ * Possibly an older non-used script
  */
 public class HandPresence : MonoBehaviour
 {

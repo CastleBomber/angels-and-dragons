@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
+// Not used
+// Grabs objects, keeps position it was in
+// Able to control objects from a distance (edit menu)
 public class XROffsetGrabInteractable : XRGrabInteractable
 {
     private Vector3 initialAttachLocalPos;
