@@ -22,7 +22,7 @@
 
 ## About The Project
 
-Welcome to my Unity VR project - a whimsical virtual reality music festival centered around angels and dragons. This project's goal is to create a free and inclusive experience, inviting everyone to immerse themselves in this magical world.
+An immersive VR experience including flying, warp, teleportation and lightsaber mechanics using C\# and Unity's XR libraries. Designed with audio and visual effects to enhance the user experience in scenarios such as the "Stairway to Heaven" and "Dragon's Egg Quest". Showcases engineered warp and teleportation mechanics, featuring a menu map for scene-wide spawning and controller-based nearby teleportation.
 
 <p align="right"></p>
 
@@ -36,7 +36,8 @@ Unity and C#
 
 ## UML Diagram of Light and Sound Shows
 
-Displaying an example of playing both visuals and sound in Unity with C#.
+Displaying my initial example of combining both visuals and sound under a Show Manager. 
+*This project has since been updated and will soon showcase newer implementations.
 
 <img width="441" alt="UML-LS-v1" src="https://github.com/CastleBomber/angels-and-dragons/assets/23395196/dd43b31d-0125-4e21-8243-ef8deab93874">
 
