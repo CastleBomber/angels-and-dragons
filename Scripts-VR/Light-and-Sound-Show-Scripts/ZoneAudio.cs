@@ -6,7 +6,7 @@ using UnityEngine;
 public class ZoneAudio : MonoBehaviour
 {
     public AudioSource audioSource;
-    public SphereCollider sphereCollider; // audio zone
+    public SphereCollider sphereCollider; // Audio zone
     public Transform player;
     private bool isMenuOverriding = false; // Flag to check if menu is overriding
 
@@ -20,6 +20,12 @@ public class ZoneAudio : MonoBehaviour
 
     void Update()
     {
+        // If the menu is overriding, skip this script's volume control
+        if (isMenuOverriding) 
+        {
+            return; 
+        } 
+
         // Center of the sphere collider
         Vector3 sphereCenter = sphereCollider.transform.position + sphereCollider.center;
 
@@ -34,7 +40,16 @@ public class ZoneAudio : MonoBehaviour
 		} 
         else
         {
-            Debug.Log("Player outside of sphere");
+            // Debug.Log("Player outside of sphere");
+            audioSource.volume = 0.0f;
+        }
+    }
+
+    public void OverrideVolume(bool overrideControl)
+    {
+        isMenuOverriding = overrideControl;
+
+        if(overrideControl){
             audioSource.volume = 0.0f;
         }
     }
