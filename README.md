@@ -36,10 +36,12 @@ Unity, C#, and Blender
 
 ## Highlights
 
-Displaying my initial example of combining both visuals and sound under a Show Manager. 
-*This project has since been updated and will soon showcase newer implementations.
+Displaying my initial example of combining both visuals and sound under a Show Manager.
+\*This project has since been updated and will soon showcase newer implementations.
 
 <img width="441" alt="UML-LS-v1" src="https://github.com/CastleBomber/angels-and-dragons/assets/23395196/dd43b31d-0125-4e21-8243-ef8deab93874">
+
+<img width="441" alt="UML-LS-v1" src="https://github.com/CastleBomber/angels-and-dragons/blob/main/images/0.jpg">
 
 <p align="right"></p>
 
