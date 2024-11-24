@@ -11,7 +11,7 @@
   <h3 align="center">Angels and Dragons</h3>
 
   <p align="center">
-    Virtual Reality Music Experience
+    Virtual Reality Music Festival
     <br />
     <br />
     <br />
