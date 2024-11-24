@@ -36,8 +36,9 @@ https://www.youtube.com/watch?v=skoAmfKflfQ
 
 ## Highlights
 
-
+<p align = "center">
 <img width="441" alt="UML-LS-v1" src="https://github.com/CastleBomber/angels-and-dragons/blob/main/images/0.jpg">
+</p>
 
 <img width="441" alt="UML-LS-v1" src="https://github.com/CastleBomber/angels-and-dragons/blob/main/images/2.jpg">
 
