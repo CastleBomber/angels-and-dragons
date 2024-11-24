@@ -22,10 +22,13 @@
 
 ## About The Project
 
-https://www.youtube.com/watch?v=skoAmfKflfQ
-
-
 An immersive VR experience including flying, warp, and teleportation mechanics using C\# and Unity's XR libraries. Designed with audio and visual effects to enhance the user experience in scenarios such as the "Stairway to Heaven" and "Dragon's Egg Quest". The most unique feature to this game is the warp menu that allows users to hear music from highlighted planets and instantaneously warp to them. 
+
+<p align="right"></p>
+
+### Demo
+
+https://www.youtube.com/watch?v=skoAmfKflfQ
 
 <p align="right"></p>
 
