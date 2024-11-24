@@ -38,13 +38,15 @@ https://www.youtube.com/watch?v=skoAmfKflfQ
 
 <p align = "center">
 <img width="441" alt="UML-LS-v1" src="https://github.com/CastleBomber/angels-and-dragons/blob/main/images/0.jpg">
-</p>
 
 <img width="441" alt="UML-LS-v1" src="https://github.com/CastleBomber/angels-and-dragons/blob/main/images/2.jpg">
 
 <img width="441" alt="UML-LS-v1" src="https://github.com/CastleBomber/angels-and-dragons/blob/main/images/3.jpg">
 
 <img width="441" alt="UML-LS-v1" src="https://github.com/CastleBomber/angels-and-dragons/blob/main/images/5.jpg">
+</p>
+
+
 
 <p align="right"></p>
 
