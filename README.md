@@ -28,13 +28,13 @@ An immersive VR experience including flying, warp, teleportation and lightsaber 
 
 ### Built With
 
-Unity and C#
+Unity, C#, and Blender
 
 <p align="right"></p>
 
 <!-- UML -->
 
-## UML Diagram of Light and Sound Shows
+## Highlights
 
 Displaying my initial example of combining both visuals and sound under a Show Manager. 
 *This project has since been updated and will soon showcase newer implementations.
