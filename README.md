@@ -11,7 +11,7 @@
   <h3 align="center">Angels and Dragons</h3>
 
   <p align="center">
-    Virtual Reality Music Experience
+    Virtual Reality Music Festival
     <br />
     <br />
     <br />
@@ -22,24 +22,31 @@
 
 ## About The Project
 
-An immersive VR experience including flying, warp, teleportation and lightsaber mechanics using C\# and Unity's XR libraries. Designed with audio and visual effects to enhance the user experience in scenarios such as the "Stairway to Heaven" and "Dragon's Egg Quest". Showcases engineered warp and teleportation mechanics, featuring a menu map for scene-wide spawning and controller-based nearby teleportation.
+An immersive VR experience including flying, warp, and teleportation mechanics using C\# and Unity's XR libraries. Designed with audio and visual effects to enhance the user experience in scenarios such as the "Stairway to Heaven" and "Dragon's Egg Quest". The most unique feature to this game is the warp menu that allows users to hear music from highlighted planets and instantaneously warp to them.
 
 <p align="right"></p>
 
-### Built With
+### Demo
 
-Unity and C#
+<p align = "center">
+https://www.youtube.com/watch?v=skoAmfKflfQ
+</p>
 
 <p align="right"></p>
 
 <!-- UML -->
 
-## UML Diagram of Light and Sound Shows
+## Highlights
 
-Displaying my initial example of combining both visuals and sound under a Show Manager. 
-*This project has since been updated and will soon showcase newer implementations.
+<p align = "center">
+<img width="441" alt="UML-LS-v1" src="https://github.com/CastleBomber/angels-and-dragons/blob/main/images/0.jpg">
 
-<img width="441" alt="UML-LS-v1" src="https://github.com/CastleBomber/angels-and-dragons/assets/23395196/dd43b31d-0125-4e21-8243-ef8deab93874">
+<img width="441" alt="UML-LS-v1" src="https://github.com/CastleBomber/angels-and-dragons/blob/main/images/2.jpg">
+
+<img width="441" alt="UML-LS-v1" src="https://github.com/CastleBomber/angels-and-dragons/blob/main/images/3.jpg">
+
+<img width="441" alt="UML-LS-v1" src="https://github.com/CastleBomber/angels-and-dragons/blob/main/images/5.jpg">
+</p>
 
 <p align="right"></p>
 
