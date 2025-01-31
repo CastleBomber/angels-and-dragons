@@ -1,87 +1,44 @@
 Privacy Policy
-Last Updated: [01-30-2025]
+Last Updated: January 30, 2025
 
-Thank you for playing [Your Game Name] (the "Game"). Your privacy is important to us. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our Game on the Meta Horizon Store. By using the Game, you agree to the terms of this Privacy Policy.
+Welcome to Angels and Dragons (the "Game"), developed by CastleBomber Studios. Your privacy is important to us, and we are committed to protecting it. This Privacy Policy explains how we handle information when you use our Game on the Meta Horizon Store.
 
 1. Information We Collect
-We may collect the following types of information when you use the Game:
+We do not collect any personal or usage information from players of Angels and Dragons. This means:
 
-1.1 Personal Information
-Account Information: If you log in through Meta Horizon, we may collect your Meta account information, such as your username, profile picture, and friend list.
+We do not collect your name, email address, or any other identifying information.
 
-Contact Information: If you contact us for support, we may collect your name, email address, and other information you provide.
+We do not track your gameplay, session duration, or in-game behavior.
 
-1.2 Non-Personal Information
-Usage Data: We may collect data about how you interact with the Game, such as gameplay statistics, session duration, and in-game preferences.
-
-Device Information: We may collect information about your VR device, including hardware model, operating system, and unique device identifiers.
-
-Analytics Data: We may use third-party analytics tools (e.g., Unity Analytics, Meta Horizon SDK) to collect aggregated data about Game performance and user behavior.
-
-1.3 User-Generated Content
-If the Game allows users to create or share content (e.g., avatars, levels, or recordings), we may collect and store this content.
+We do not access or store any data from your Meta account, VR device, or other hardware.
 
 2. How We Use Your Information
-We use the information we collect for the following purposes:
-
-To provide, maintain, and improve the Game.
-
-To personalize your experience and tailor in-game content.
-
-To communicate with you, including responding to support requests.
-
-To analyze Game performance and user behavior for development purposes.
-
-To comply with legal obligations and enforce our terms of service.
+Since we do not collect any information, there is no data to use, share, or store.
 
 3. Sharing Your Information
-We do not sell your personal information. However, we may share your information in the following circumstances:
-
-With Meta Platforms, Inc.: As the Game is distributed through the Meta Horizon Store, certain information may be shared with Meta to facilitate your use of the Game.
-
-With Service Providers: We may share information with third-party service providers who assist us in operating the Game (e.g., analytics, hosting, customer support).
-
-For Legal Reasons: We may disclose information if required by law or to protect our rights, property, or safety.
-
-With Your Consent: We may share information if you give us explicit permission to do so.
+We do not share any information because we do not collect any information.
 
 4. Data Retention
-We retain your information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required by law.
+We do not retain any data because we do not collect any data.
 
 5. Your Rights and Choices
-Depending on your location, you may have the following rights regarding your personal information:
-
-Access: Request a copy of the personal information we hold about you.
-
-Correction: Request that we correct inaccurate or incomplete information.
-
-Deletion: Request that we delete your personal information.
-
-Opt-Out: Opt out of certain data collection or processing activities, such as analytics tracking.
-
-To exercise these rights, please contact us at [Your Contact Email].
+Since we do not collect any personal or usage information, there is no data for you to access, correct, or delete.
 
 6. Security
-We take reasonable measures to protect your information from unauthorized access, disclosure, or misuse. However, no method of transmission or storage is 100% secure, and we cannot guarantee absolute security.
+While we do not collect any information, we still take reasonable measures to ensure the security and integrity of our Game.
 
 7. International Transfers
-Your information may be transferred to and processed in countries other than your own, where data protection laws may differ. By using the Game, you consent to such transfers.
+Not applicable, as we do not collect or transfer any data.
 
 8. Children’s Privacy
-The Game is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that we have collected such information, we will take steps to delete it.
+The Game is not intended for children under the age of 13. Since we do not collect any information, we do not knowingly gather data from children.
 
 9. Changes to This Privacy Policy
-We may update this Privacy Policy from time to time. If we make material changes, we will notify you through the Game or via email. Your continued use of the Game after such changes constitutes your acceptance of the updated Privacy Policy.
+We may update this Privacy Policy from time to time. If we make changes, we will notify you by updating the "Last Updated" date at the top of this policy. Your continued use of the Game after any changes constitutes your acceptance of the updated Privacy Policy.
 
 10. Contact Us
-If you have any questions about this Privacy Policy or our data practices, please contact us at:
-[Your Company Name]
-Email: [Your Contact Email]
-Website: [Your Website URL]
+If you have any questions about this Privacy Policy or our privacy practices, please contact us at:
+CastleBomber Studios
+Email: cbombs@cboms.com
+Website: www.cbombs.com
 
-Notes:
-Customization: Replace placeholders (e.g., [Your Game Name], [Your Contact Email]) with your specific details.
-
-Compliance: Ensure your game complies with Meta Horizon's policies and any applicable laws (e.g., GDPR, CCPA).
-
-Third-Party Services: If you use third-party services (e.g., Unity Analytics, AdMob), include their privacy practices in your policy.
